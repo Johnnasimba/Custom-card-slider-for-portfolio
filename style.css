@@ -1,4 +1,5 @@
 
+
 #projects {
     background-color: blanchedalmond;
     height: 500px;
@@ -38,4 +39,39 @@
     height: 45%;
     width: auto;
     background-color:black;
+}
+/* Card body */
+.card-body {
+    height: 45%;
+}
+
+
+/* Card footer */
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+.card-footer a {
+    width: 50%;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+.card-footer i {
+    margin-top: 0px;
+    padding-top: 0px;
+    color: #000;
+}
+.fa-link, 
+.live:hover {
+    text-decoration: underline;
+    transform: scale(1.01);
+}
+@media screen and (max-width: 1000px) {
+    #desktop-view {
+        display: none !important;
+    }
 }
