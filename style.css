@@ -1,7 +1,7 @@
 
 
 #projects {
-    background-color: blanchedalmond;
+    background-color:rgb(240,240,240);
     height: 500px;
     width: 100%;
     margin-top: 200px;
@@ -14,7 +14,7 @@
 
 .prev-btn,
 .next-btn {
-    background-color: cornflowerblue;
+    /* background-color: cornflowerblue; */
     width: 5%;
     padding-top: 200px;
     font-size: 100px;
@@ -38,7 +38,7 @@
 .card-img-top {
     height: 45%;
     width: auto;
-    background-color:black;
+    background-color:rgb(234,245,254);
 }
 /* Card body */
 .card-body {
@@ -67,6 +67,11 @@
 }
 .fa-link, 
 .live:hover {
+    text-decoration: underline;
+    transform: scale(1.01);
+}
+.fa-github, 
+.code:hover {
     text-decoration: underline;
     transform: scale(1.01);
 }
