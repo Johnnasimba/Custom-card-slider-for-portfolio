@@ -18,12 +18,14 @@
     width: 5%;
     padding-top: 200px;
     font-size: 100px;
+    color: rgb(199, 202, 204);
 }
 .slides-container {
     width: 90%;
-    height: 450px;
+    height: 500px;
     overflow: hidden;
     margin: 20px 0 20px 0;
+    
 
 }
 .card-group {
@@ -31,18 +33,27 @@
     height: 100%;
 }
 .card {
-    height: 100%;
-    max-width: 400px;
-    margin: 0 5px 0 5px;
+    height: 450px;
+    width: 300px;
+    margin: 20px;
+    margin-top: 0px;
+    border-radius: 10px;
+   
+}
+.card:hover {
+    transform: scale(1.02);
+    transition-duration: 200ms;
 }
 .card-img-top {
-    height: 45%;
+    height: 230px;
     width: auto;
     background-color:rgb(234,245,254);
 }
 /* Card body */
 .card-body {
-    height: 45%;
+    display: inline-block;
+    height: 150px;
+    padding: 10px;
 }
 
 
@@ -75,6 +86,7 @@
     text-decoration: underline;
     transform: scale(1.01);
 }
+
 @media screen and (max-width: 1000px) {
     #desktop-view {
         display: none !important;
