@@ -10,14 +10,13 @@
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
-      <div class="container">
-         <section id="projects">
+      
+         <section class="container" id="projects">
              <!-- Desktop View -->
              <div id="desktop-view">
-                    <div class="prev-btn"><i class="fas fa-chevron-left"></i></div>
 
                     <div class="slides-container" align=center>
-                        <div class="card-group">
+                        <div class="card-group" id="firstCardGroup">
                             <div class="card">
                               <img class="card-img-top img-fluid" src="images/jobseeker.png" alt="Card image cap">
                               <div class="card-body">
@@ -73,18 +72,79 @@
                                 </div>
                             </div>
                           </div>
+
+                          <!-- Second card group -->
+                        <div class="card-group" id="secondCardGroup">
+                            <div class="card">
+                              <img class="card-img-top img-fluid" src="" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Hout bay Job Seekers</h5>
+                                <p class="card-text">This website allows Hout bay job seekers to host their profiles online so that potential employers and recruiters can easily find them.</p>
+                              </div>
+                              <div class="card-footer">
+                                <a  href="#" class="view-live">
+                                    <i class="fas fa-link"></i>                                     
+                                    <p class="live">View live</p>
+                                </a>
+                                <a href="#" class="source-code">
+                                    <i class="fab fa-github"></i>
+                                    <p class="code">Source code</p>
+
+                                </a>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <img class="card-img-top img-fluid"  src="" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Clothing Store</h5>
+                                <p class="card-text">An online shopping website for a clothing store where the store can post different categories of their cloths and users can buy using credit cards.</p>
+                              </div>
+                              <div class="card-footer">
+                                    <a  href="#" class="view-live">
+                                        <i class="fas fa-link"></i>                                     
+                                        <p class="live">View live</p>
+                                    </a>
+                                    <a href="#" class="source-code">
+                                        <i class="fab fa-github"></i>
+                                        <p class="code">Source code</p>
+
+                                    </a>
+                              </div>
+                            </div>
+                            <div class="card ">
+                              <img class="card-img-top img-fluid"  src="" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">Light and Dark mode</h5>
+                                <p class="card-text">The idea behind this website is to demostrate the technicality behind light and dark mode which is commonly used these days.</p>
+                              </div>
+                              <div class="card-footer">
+                                    <a  href="#" class="view-live">
+                                        <i class="fas fa-link"></i>                                     
+                                        <p class="live">View live</p>
+                                    </a>
+                                    <a href="#" class="source-code">
+                                        <i class="fab fa-github"></i>
+                                        <p class="code">Source code</p>
+
+                                    </a>
+                                </div>
+                            </div>
+                          </div>
+
+                          <!-- Second card group -->
                     </div>
                 
-                    <div class="next-btn"><i class="fas fa-chevron-right"></i></div>
+                   
             </div>
-            <div class="navigation-dots">
-                <div class="single-dot"></div>
-                <div class="single-dot active"></div>
-                <div class="single-dot"></div>
+              <!-- NB: Navigation dots has been replaced by arrows for the moment. It will be back as soon as there is a need to have three card groups in the sides container -->
+            <div class="navigation-arrows">
+              <div class="prev-btn arrow"><i class="fas fa-chevron-left"></i></div>
+              <div class="next-btn arrow "><i class="fas fa-chevron-right"></i></div>
+               
             </div>
-          
+           
          </section>
-      </div>
+      
       <!-- Script -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -92,3 +152,4 @@
       <script src="script.js"></script>
    </body>
 </html>
+
