@@ -8,7 +8,7 @@ const slidesContainer = document.querySelector(".slides-container");
 const cardGroup = document.querySelectorAll(".card-group");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
-const navigationDots = document.querySelector(".navigation-arrows");
+const navigationDots = document.querySelector(".navigation-dots");
 const card = document.querySelector(".card");
 
 let numberOfCardGroups = cardGroup.length;
@@ -39,11 +39,11 @@ init();
 
 function createNavigationDots() {
   for (let i = 0; i < numberOfCardGroups; i++) {
-    const arrow = document.createElement("div");
-    arrow.classList.add("arrow");
-    navigationDots.appendChild(arrow);
+    const dot = document.createElement("div");
+    dot.classList.add("single-dot");
+    navigationDots.appendChild(dot);
 
-    arrow.addEventListener("click", () => {
+    dot.addEventListener("click", () => {
       goToSlide(i);
     });
   }
@@ -89,7 +89,7 @@ function goToSlide(slideNumber) {
 // Set Active Class
 
 function setActiveClass() {
-  // Set active class for Slide Image
+  // Set active class for Slider
 
   let currentActive = document.querySelector(".card-group.active");
   currentActive.classList.remove("active");
@@ -97,7 +97,7 @@ function setActiveClass() {
 
   //   set active class for navigation dots
 
-  let currentDot = document.querySelector(".single-arrow.active");
+  let currentDot = document.querySelector(".single-dot.active");
   currentDot.classList.remove("active");
   navigationDots.children[currentSlide].classList.add("active");
 }

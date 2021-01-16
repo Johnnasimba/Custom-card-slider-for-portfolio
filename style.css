@@ -33,7 +33,7 @@ body {
     min-width: 1000px;
     height: 90%;
 }
-#desktop-view .card {
+ .card {
     height: 450px ;
     width: 300px;
     margin: 20px;
@@ -43,7 +43,7 @@ body {
 
    
 }
-#desktop-view .card:hover {
+ .card:hover {
     transform: scale(1.02);
     transition-duration: 200ms;
 }
@@ -85,15 +85,14 @@ body {
     transform: scale(1.01);
 }
 
-/* Navigation Dots */
-.navigation-arrows{
+/* Navigation Arrow */
+.desktop-navigation{
      display: flex;
      height: 20px;     
      align-items: center;
      justify-content: center;
    }
-.arrow {
-   
+.arrow {   
     height: 30px;
     width: 30px;
     margin: 0 8px;
@@ -102,6 +101,30 @@ body {
     font-size: 20px;
 
 }
+/* Navigation Dots */
+      
+.navigation-dots {
+    display: flex;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0;
+  }
+  
+  .single-dot {
+    background: #333;
+    height: 16px;
+    width: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .single-dot.active {
+    background: #eee;
+  }
 
 
 
@@ -110,9 +133,79 @@ body {
     #desktop-view {
         display: none !important;
     }
+    .desktop-navigation {
+        display: none !important;
+    }
     #mobile-view {
         display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding: 0;
+    }      
+      .slides-container {
+        width: 90%;
+        position: relative;
+        height: 500px;
+        transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+        margin: 0 auto;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        
+      }
+      
+      .card {
+        height: 95%;
+        width: 350px;
+        position: absolute;
+        margin: 10px 0 0 0;
+      }
+      
+    /* Card footer */
+    .card-footer {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        margin: 0;
+        padding: 0 10px;
     }
+    .card-footer a {
+        width: 50%;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .card-footer i {
+        margin-top: 0px;
+        padding-top: 0px;
+        color: #000;
+    }
+    .fa-link:hover,
+    .live:hover {
+        text-decoration: underline;
+        transform: scale(1.01);
+    }
+
+      /* Mobile navigation */
+      .mobile-navigation{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          height: 30px;
+          width: fit-content;
+      } 
+      .navigation-dots {
+          display: flex;
+          height: 32px;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+        }
+        
+      
+      
 }
 
 
