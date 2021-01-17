@@ -153,12 +153,11 @@ body {
       }
       
       .slide-card {
-        background-color: cadetblue;
         height: 100%;
         width: 100%;
         position: absolute;
       }
-      .card {
+      .mobile-cardd {
         height: 95%;
         width: 350px;
         margin: 0;
@@ -215,31 +214,35 @@ body {
 }
 
 @media screen and (min-width: 750px ) {
-    .card {
-        margin-left: 200px;
+    .mobile-card {
+        margin: 10px 30% 0px 30%;
+    }
+    .mobile-navigation {
+        margin: 0 32% 0 32% ;
     }
 
+} 
+@media screen and (max-width:750px) {
+    .mobile-card {
+        margin: 0 20% 0 20%;
+    }
+    .mobile-navigation {
+        margin: 0 22% 0 22% ;
+    }
+}
+@media screen and (max-width:450px) {
+    .mobile-card {
+        margin: 0 10% 0 10%;
+    }
+    .mobile-navigation {
+        margin: 0 8% 0 8%;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    /* #projects {
-        padding: 0;
-        margin: 0;
-    }
-    #mobile-view {
-        margin: 0;
-        padding: 0;
-    }
-    .mobile-slides-container {
-        width: 100%;
-    }
-    .slide-card {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    } */
-    .card {
-        margin: 10px 30px;
+  
+    .mobile-card {
+        margin: 10px;
         width: 320px;
         widows: 350px;;
     }
@@ -253,20 +256,10 @@ body {
 }
 
 @media screen and (max-width: 350px) {
-    /* #projects {
-        padding: 0;
-        margin: 0;
-    }
-    #mobile-view {
-        margin: 0;
-        padding: 0;
-    }
-    .slides-container {
-        width: 100%;
-    } */
-    .card {
-        margin: 10px;
-        width: 300px;
+
+    .mobile-card {
+        margin: 5px;
+        width: 280px;
       
     }
     .prev-btn.arrow {
