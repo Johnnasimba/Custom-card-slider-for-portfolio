@@ -127,7 +127,7 @@ body {
   }
 
 
-
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 1200px) {
     #desktop-view {
@@ -144,22 +144,23 @@ body {
         height: 100%;
         overflow: hidden;
         padding: 0;
+        margin: 0;
     }      
       .mobile-slides-container {
-        width: 90%;
         position: relative;
         height: 500px;
         transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
-        margin: 0 auto;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        
       }
       
+      .slide-card {
+        background-color: cadetblue;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+      }
       .card {
         height: 95%;
         width: 350px;
-        position: absolute;
         margin: 0;
       }
       .card-body {
@@ -194,7 +195,7 @@ body {
         text-decoration: underline;
         transform: scale(1.01);
     }
-
+   
       /* Mobile navigation */
       .mobile-navigation{
           display: flex;
@@ -214,14 +215,14 @@ body {
 }
 
 @media screen and (min-width: 750px ) {
-    #mobile-view  {
-        padding-left: 200px;
+    .card {
+        margin-left: 200px;
     }
 
 }
 
 @media screen and (max-width: 400px) {
-    #projects {
+    /* #projects {
         padding: 0;
         margin: 0;
     }
@@ -232,10 +233,15 @@ body {
     .mobile-slides-container {
         width: 100%;
     }
+    .slide-card {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    } */
     .card {
         margin: 10px 30px;
         width: 320px;
-        width: 100%;
+        widows: 350px;;
     }
     .prev-btn.arrow {
         padding-right: 0;
@@ -247,7 +253,7 @@ body {
 }
 
 @media screen and (max-width: 350px) {
-    #projects {
+    /* #projects {
         padding: 0;
         margin: 0;
     }
@@ -257,7 +263,7 @@ body {
     }
     .slides-container {
         width: 100%;
-    }
+    } */
     .card {
         margin: 10px;
         width: 300px;

@@ -1,7 +1,7 @@
 
 // SCRIPTS FOR MOBILE VIEW
 const mobileSlidesContainer = document.querySelector(".mobile-slides-container");
-const mobileCard = document.querySelectorAll(".mobile-card");
+const mobileCard = document.querySelectorAll(".slide-card");
 const mobileNextBtn = document.getElementById("next-btn");
 const mobilePrevBtn = document.getElementById("prev-btn");
 const mobileNavigationDots = document.querySelector(".mobile-navigation-dots");
@@ -81,7 +81,7 @@ function smGoToSlide(mobileSlideNumber) {
 function smSetActiveClass() {
   // Set active class for Slider
 
-  let smCurrentActive = document.querySelector(".card.active");
+  let smCurrentActive = document.querySelector(".slide-card.active");
   smCurrentActive.classList.remove("active");
   mobileCard[mobileCurrentSlide].classList.add("active");
 
