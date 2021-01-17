@@ -145,7 +145,7 @@ body {
         overflow: hidden;
         padding: 0;
     }      
-      .slides-container {
+      .mobile-slides-container {
         width: 90%;
         position: relative;
         height: 500px;
@@ -204,7 +204,7 @@ body {
           width: fit-content;
           margin-left: 30px;
       } 
-      .navigation-dots {
+      .mobile-navigation-dots {
           display: flex;
           height: 32px;
           align-items: center;
@@ -229,12 +229,13 @@ body {
         margin: 0;
         padding: 0;
     }
-    .slides-container {
+    .mobile-slides-container {
         width: 100%;
     }
     .card {
         margin: 10px 30px;
         width: 320px;
+        width: 100%;
     }
     .prev-btn.arrow {
         padding-right: 0;
@@ -260,6 +261,7 @@ body {
     .card {
         margin: 10px;
         width: 300px;
+      
     }
     .prev-btn.arrow {
         padding-right: 0;

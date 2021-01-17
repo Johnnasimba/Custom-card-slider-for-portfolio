@@ -1,103 +1,93 @@
 
-// NOTICE: This project section is incomplete.It will be completed 
-// as soon as there is more than two card groups such that all the functionalities 
-// are working fully
+// SCRIPTS FOR MOBILE VIEW
+const mobileSlidesContainer = document.querySelector(".mobile-slides-container");
+const mobileCard = document.querySelectorAll(".mobile-card");
+const mobileNextBtn = document.getElementById("next-btn");
+const mobilePrevBtn = document.getElementById("prev-btn");
+const mobileNavigationDots = document.querySelector(".mobile-navigation-dots");
 
 
-const slidesContainer = document.querySelector(".slides-container");
-const cardGroup = document.querySelectorAll(".card-group");
-const nextBtn = document.querySelector(".next-btn");
-const prevBtn = document.querySelector(".prev-btn");
-const navigationDots = document.querySelector(".navigation-dots");
-const card = document.querySelector(".card");
-
-let numberOfCardGroups = cardGroup.length;
-let slideWidth = cardGroup[0].clientWidth;
-let currentSlide = 0;
+let numberOfMobileCard = mobileCard.length;
+let mobileSlideWidth = mobileCard[0].clientWidth;
+let mobileCurrentSlide = 0;
 
 // Set up the slider
 
-function init() {
-  /*   
-    cardGroup[0] = 0
-    cardGroup[1] = 100%
-    cardGroup[2] = 200%
-    */
-
-  cardGroup.forEach((card, i) => {
+function  mobileInit() {
+  mobileCard.forEach((card, i) => {
     card.style.left = i * 100 + "%";
   });
 
-  cardGroup[0].classList.add("active");
+  mobileCard[0].classList.add("active");
 
-  createNavigationDots();
+  createNavigationDotsForMobile();
 }
 
-init();
+mobileInit();
 
 // Create navigation dots
 
-function createNavigationDots() {
-  for (let i = 0; i < numberOfCardGroups; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("single-dot");
-    navigationDots.appendChild(dot);
+function createNavigationDotsForMobile() {
+  for (let i = 0; i < numberOfMobileCard; i++) {
+    const mobileDot = document.createElement("div");
+    mobileDot.classList.add("single-dot");
+    mobileNavigationDots.appendChild(mobileDot);
 
-    dot.addEventListener("click", () => {
-      goToSlide(i);
+    mobileDot.addEventListener("click", () => {
+      smGoToSlide(i);
     });
   }
 
-  navigationDots.children[0].classList.add("active");
+ mobileNavigationDots.children[0].classList.add("active");
 }
 
 // Next Button
 
-nextBtn.addEventListener("click", () => {
-  if (currentSlide >= numberOfCardGroups - 1) {
-    goToSlide(0);
+mobileNextBtn.addEventListener("click", () => {
+  if (mobileCurrentSlide >= numberOfMobileCard - 1) {
+    smGoToSlide(0);
     return;
   }
 
-  currentSlide++;
-  goToSlide(currentSlide);
+  mobileCurrentSlide++;
+  smGoToSlide(mobileCurrentSlide);
 });
 
 // Previous Button
 
-prevBtn.addEventListener("click", () => {
-  if (currentSlide <= 0) {
-    goToSlide(numberOfCardGroups - 1);
+mobilePrevBtn.addEventListener("click", () => {
+  if (mobileCurrentSlide <= 0) {
+    smGoToSlide(numberOfMobileCard - 1);
     return;
   }
 
-  currentSlide--;
-  goToSlide(currentSlide);
+  mobileCurrentSlide--;
+  smGoToSlide(mobileCurrentSlide);
 });
 
 // Go To Slide
 
-function goToSlide(slideNumber) {
-  slidesContainer.style.transform =
-    "translateX(-" + slideWidth * slideNumber + "px)";
+function smGoToSlide(mobileSlideNumber) {
+  mobileSlidesContainer.style.transform =
+    "translateX(-" + mobileSlideWidth * mobileSlideNumber + "px)";
 
-  currentSlide = slideNumber;
+    mobileCurrentSlide = mobileSlideNumber;
 
-  setActiveClass();
+ smSetActiveClass();
 }
 
 // Set Active Class
 
-function setActiveClass() {
+function smSetActiveClass() {
   // Set active class for Slider
 
-  let currentActive = document.querySelector(".card-group.active");
-  currentActive.classList.remove("active");
-  cardGroup[currentSlide].classList.add("active");
+  let smCurrentActive = document.querySelector(".card.active");
+  smCurrentActive.classList.remove("active");
+  mobileCard[mobileCurrentSlide].classList.add("active");
 
   //   set active class for navigation dots
 
-  let currentDot = document.querySelector(".single-dot.active");
-  currentDot.classList.remove("active");
-  navigationDots.children[currentSlide].classList.add("active");
+  let smCurrentDot = document.querySelector(".single-dot.active");
+  smCurrentDot.classList.remove("active");
+  mobileNavigationDots.children[mobileCurrentSlide].classList.add("active");
 }
