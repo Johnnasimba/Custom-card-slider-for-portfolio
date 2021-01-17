@@ -13,7 +13,7 @@ body {
    width: 100%;
    overflow: hidden;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: nowrap;
 }
 #desktop-view .slides-container {
