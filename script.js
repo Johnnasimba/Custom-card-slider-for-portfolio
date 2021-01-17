@@ -147,6 +147,7 @@ function createNavigationDotsForMobile() {
   for (let i = 0; i < numberOfMobileCard; i++) {
     const mobileDot = document.createElement("div");
     mobileDot.classList.add("single-dot");
+    mobileDot.setAttribute("id", "mobile-dot");
     mobileNavigationDots.appendChild(mobileDot);
 
     mobileDot.addEventListener("click", () => {
